@@ -1,0 +1,272 @@
+.productLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.galleryContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.thumbnailList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80px;
+}
+
+.thumbnail {
+  position: relative;
+  aspect-ratio: 1 / 1.2;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.activeThumbnail {
+  border-color: #000;
+}
+
+.mainImageWrapper {
+  position: relative;
+  flex: 1;
+}
+
+.mainImage {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background: #fdfdfd;
+  overflow: hidden;
+}
+
+.zoomImage {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.mainImage:hover .zoomImage {
+  transform: scale(1.1);
+}
+
+.promoBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ff9d00;
+  color: #fff;
+  padding: 5px 12px;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.breadcrumb {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999;
+  margin-bottom: 30px;
+}
+
+.breadcrumb a {
+  margin: 0 5px;
+  color: #999;
+}
+
+.name {
+  font-size: 2.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.oldPrice {
+  font-size: 1rem;
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.discountPrice {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ff4747;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #eee;
+  margin-bottom: 40px;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.optionsSection {
+  margin-bottom: 50px;
+}
+
+.optionLabel {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.sizeGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.sizeBtn {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.sizeBtn:hover:not(:disabled) {
+  border-color: #000;
+}
+
+.activeSize {
+  background: #000;
+  color: #fff !important;
+  border-color: #000;
+}
+
+.outOfStock {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: #f9f9f9;
+}
+
+.stockLabel {
+  font-size: 0.6rem;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #ff4747;
+}
+
+.qtyContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.qtyControl {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  width: fit-content;
+}
+
+.qtyControl button {
+  width: 45px;
+  height: 45px;
+  font-size: 1.1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.qtyControl span {
+  width: 45px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.availability {
+  font-size: 0.8rem;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.5px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #28a745;
+  border-radius: 50%;
+}
+
+.cta {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.cta:hover {
+  opacity: 0.9;
+}
+
+.extraInfo {
+  background: #f9f9f9;
+  padding: 20px;
+  border-left: 3px solid #000;
+}
+
+.extraInfo p {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .productLayout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .galleryContainer {
+    flex-direction: column-reverse;
+  }
+  .thumbnailList {
+    flex-direction: row;
+    width: 100%;
+  }
+  .thumbnail {
+    width: 70px;
+  }
+}

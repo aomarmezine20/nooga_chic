@@ -1,0 +1,124 @@
+.container {
+  overflow-x: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.lookbookSection {
+  padding: 120px 0;
+}
+
+.lookbookBanner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  background-image: url('/images/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.lookbookContent {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 60px;
+  max-width: 500px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #999;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+.hotDeals {
+  background: #fffafa;
+}
+
+.categories {
+  display: flex;
+  height: 600px;
+}
+
+.categoryCard {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.categoryCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.categoryCard:hover img {
+  transform: scale(1.05);
+}
+
+.categoryInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.categoryInfo h3 {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .categories {
+    flex-direction: column;
+    height: auto;
+  }
+  .categoryCard {
+    height: 400px;
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "Header": {
+    "home": "HOME",
+    "shop": "SHOP",
+    "heels": "HEELS",
+    "bags": "BAGS",
+    "about": "ABOUT",
+    "contact": "CONTACT"
+  },
+  "Hero": {
+    "tagline": "Everyday Elegance",
+    "cta": "EXPLORE COLLECTION",
+    "subtitle": "Refinement in every step."
+  },
+  "Home": {
+    "newArrivals": "NEW ARRIVALS",
+    "bestSellers": "BEST SELLERS",
+    "trending": "TRENDING NOW",
+    "hotDeals": "HOT DEALS",
+    "viewAll": "VIEW ALL",
+    "shopByCategory": "SHOP BY CATEGORY",
+    "heels": "HEELS",
+    "bags": "BAGS",
+    "discover": "DISCOVER",
+    "lookbook": "LOOKBOOK",
+    "newsletter": "JOIN OUR NEWSLETTER",
+    "newsletterPlaceholder": "Your email address",
+    "subscribe": "SUBSCRIBE",
+    "instagram": "FOLLOW US ON INSTAGRAM",
+    "instagramSubtitle": "Share your style with #NoogaChic",
+    "artDeL'Elegance": "The Art of Elegance",
+    "lookbookDesc": "A selection designed for the modern woman who makes no compromise on her style.",
+    "newArrivalsSubtitle": "Discover our latest gems",
+    "bestSellersSubtitle": "What you love most",
+    "hotDealsSubtitle": "Grab them before they're gone",
+    "heroSubtitle": "Discover our exclusive collection of heels and bags.",
+    "discoverCollection": "DISCOVER COLLECTION"
+  },
+  "Product": {
+    "commander": "ORDER VIA WHATSAPP",
+    "size": "SIZE",
+    "qty": "QUANTITY",
+    "inStock": "IN STOCK",
+    "outOfStock": "OUT OF STOCK",
+    "availability": "AVAILABILITY",
+    "new": "NEW",
+    "hot": "HOT",
+    "sale": "SALE",
+    "selectSize": "Please select a size",
+    "deliveryInfo": "🚚 Fast shipping across Morocco. Cash on delivery."
+  },
+  "Filters": {
+    "all": "ALL",
+    "category": "CATEGORY",
+    "price": "PRICE"
+  },
+  "Footer": {
+    "manifesto": "Moroccan refinement at the service of the modern woman. An exclusive selection of heels and bags designed to enhance every moment.",
+    "allRightsReserved": "All rights reserved",
+    "help": "HELP",
+    "social": "FOLLOW US",
+    "legal": "LEGAL",
+    "shipping": "Shipping",
+    "returns": "Returns",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "morocco": "MOROCCO",
+    "cod": "CASH ON DELIVERY"
+  },
+  "Admin": {
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "storefront": "Storefront",
+    "settings": "Profile Settings",
+    "logout": "Logout",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "add": "Add",
+    "newProduct": "New Product",
+    "updateProduct": "Update Product",
+    "name": "Name",
+    "price": "Price",
+    "stock": "Stock",
+    "category": "Category",
+    "images": "Images",
+    "description": "Description",
+    "variants": "Variants",
+    "brand": "Nooga Chic Panel"
+  }
+}

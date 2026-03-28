@@ -1,0 +1,93 @@
+{
+  "Header": {
+    "home": "ACCUEIL",
+    "shop": "BOUTIQUE",
+    "heels": "TALONS",
+    "bags": "SACS",
+    "about": "À PROPOS",
+    "contact": "CONTACT"
+  },
+  "Hero": {
+    "tagline": "Élégance au quotidien",
+    "cta": "DÉCOUVRIR LA COLLECTION",
+    "subtitle": "Le raffinement à chaque pas."
+  },
+  "Home": {
+    "newArrivals": "NOUVELLE COLLECTION",
+    "bestSellers": "MEILLEURES VENTES",
+    "trending": "TENDANCE MAINTENANT",
+    "hotDeals": "OFFRES EXCEPTIONNELLES",
+    "viewAll": "VOIR TOUT",
+    "shopByCategory": "ACHETER PAR CATÉGORIE",
+    "heels": "TALONS",
+    "bags": "SACS",
+    "discover": "DÉCOUVRIR",
+    "lookbook": "LOOKBOOK",
+    "newsletter": "INSCRIVEZ-VOUS À NOTRE NEWSLETTER",
+    "newsletterPlaceholder": "Votre email",
+    "subscribe": "S'ABONNER",
+    "instagram": "SUIVEZ NOUS SUR INSTAGRAM",
+    "instagramSubtitle": "Partagez votre style avec #NoogaChic",
+    "artDeL'Elegance": "L'art de l'élégance",
+    "lookbookDesc": "Une sélection pensée pour la femme moderne qui ne fait aucun compromis sur son style.",
+    "newArrivalsSubtitle": "Découvrez nos dernières pépites",
+    "bestSellersSubtitle": "Ce que vous préférez",
+    "hotDealsSubtitle": "Profitez-en avant qu'il ne soit trop tard",
+    "heroSubtitle": "Découvrez notre collection exclusive de talons et sacs.",
+    "discoverCollection": "DÉCOUVRIR LA COLLECTION"
+  },
+  "Product": {
+    "commander": "COMMANDER SUR WHATSAPP",
+    "size": "TAILLE",
+    "qty": "QUANTITÉ",
+    "inStock": "EN STOCK",
+    "outOfStock": "EN RUPTURE DE STOCK",
+    "availability": "DISPONIBILITÉ",
+    "new": "NOUV.",
+    "hot": "HOT",
+    "sale": "SOLDES",
+    "selectSize": "S'il vous plaît choisissez une taille",
+    "deliveryInfo": "🚚 Livraison dans tout le Maroc. Paiement à la livraison."
+  },
+  "Filters": {
+    "all": "TOUS",
+    "category": "CATÉGORIE",
+    "price": "PRIX"
+  },
+  "Footer": {
+    "manifesto": "Le raffinement marocain au service de la femme moderne. Une sélection exclusive de talons et sacs pensée pour sublimer chaque instant.",
+    "allRightsReserved": "Tous droits réservés",
+    "help": "AIDE",
+    "social": "SUIVEZ-NOUS",
+    "legal": "LÉGAL",
+    "shipping": "Expédition",
+    "returns": "Retours",
+    "contact": "Contact",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "morocco": "MAROC",
+    "cod": "PAIEMENT À LA LIVRAISON"
+  },
+  "Admin": {
+    "dashboard": "Tableau de Bord",
+    "products": "Gestion Produits",
+    "storefront": "Gestion Vitrine",
+    "settings": "Réglages Profil",
+    "logout": "Déconnexion",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "add": "Ajouter",
+    "newProduct": "Nouveau Produit",
+    "updateProduct": "Mettre à jour",
+    "name": "Nom",
+    "price": "Prix",
+    "stock": "Stock",
+    "category": "Catégorie",
+    "images": "Images",
+    "description": "Description",
+    "variants": "Variantes",
+    "brand": "Panneau Nooga Chic"
+  }
+}

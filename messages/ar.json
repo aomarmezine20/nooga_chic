@@ -1,0 +1,93 @@
+{
+  "Header": {
+    "home": "الرئيسية",
+    "shop": "المتجر",
+    "heels": "أحذية بكعب",
+    "bags": "حقائب",
+    "about": "من نحن",
+    "contact": "اتصل بنا"
+  },
+  "Hero": {
+    "tagline": "أناقة كل يوم",
+    "cta": "اكتشفي المجموعة",
+    "subtitle": "رقي في كل خطوة."
+  },
+  "Home": {
+    "newArrivals": "المجموعة الجديدة",
+    "bestSellers": "الأكثر مبيعاً",
+    "trending": "رائج الآن",
+    "hotDeals": "عروض ساخنة",
+    "viewAll": "مشاهدة الكل",
+    "shopByCategory": "تسوق حسب الفئة",
+    "heels": "أحذية بكعب",
+    "bags": "حقائب",
+    "discover": "اكتشف",
+    "lookbook": "LOOKBOOK",
+    "newsletter": "اشتركي في نشرتنا الإخبارية",
+    "newsletterPlaceholder": "بريدك الإلكتروني",
+    "subscribe": "اشتراك",
+    "instagram": "تابعينا على إنستغرام",
+    "instagramSubtitle": "شاركينا ستايلك مع #NoogaChic",
+    "artDeL'Elegance": "فن الأناقة",
+    "lookbookDesc": "مجموعة مصممة للمرأة العصرية التي لا تقبل أي مساومة على أسلوبها.",
+    "newArrivalsSubtitle": "اكتشفي آخر صيحاتنا الجديدة",
+    "bestSellersSubtitle": "ما تفضله زبناؤنا",
+    "hotDealsSubtitle": "استمتعي بالعروض قبل نفاذ الكمية",
+    "heroSubtitle": "اكتشفي تشكيلتنا الحصرية من الأحذية الكلاسيكية والحقائب.",
+    "discoverCollection": "اكتشفي التشكيلة"
+  },
+  "Product": {
+    "commander": "اطلب عبر واتساب",
+    "size": "المقاس",
+    "qty": "الكمية",
+    "inStock": "متوفر",
+    "outOfStock": "غير متوفر",
+    "availability": "التوفر",
+    "new": "جديد",
+    "hot": "HOT",
+    "sale": "تخفيض",
+    "selectSize": "يرجى اختيار المقاس",
+    "deliveryInfo": "🚚 توصيل سريع في جميع أنحاء المغرب. الأداء عند الاستلام."
+  },
+  "Filters": {
+    "all": "الكل",
+    "category": "الفئة",
+    "price": "الثمن"
+  },
+  "Footer": {
+    "manifesto": "الرقي المغربي في خدمة المرأة المعاصرة. مجموعة حصرية من الأحذية الكلاسيكية والحقائب المصممة لتبرز جمال كل لحظة.",
+    "allRightsReserved": "كل الحقوق محفوظة",
+    "help": "مساعدة",
+    "social": "تابعونا",
+    "legal": "قانوني",
+    "shipping": "الشحن",
+    "returns": "الاسترجاع",
+    "contact": "اتصل بنا",
+    "privacy": "الخصوصية",
+    "terms": "الشروط",
+    "morocco": "المغرب",
+    "cod": "الدفع عند الاستلام"
+  },
+  "Admin": {
+    "dashboard": "لوحة القيادة",
+    "products": "إدارة المنتجات",
+    "storefront": "إدارة الواجهة",
+    "settings": "إعدادات الملف الشخصي",
+    "logout": "تسجيل الخروج",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "add": "إضافة",
+    "newProduct": "منتج جديد",
+    "updateProduct": "تحديث المنتج",
+    "name": "الاسم",
+    "price": "السعر",
+    "stock": "المخزون",
+    "category": "الفئة",
+    "images": "الصور",
+    "description": "الوصف",
+    "variants": "الأنواع",
+    "brand": "لوحة نوكا شيك"
+  }
+}

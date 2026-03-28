@@ -1,0 +1,35 @@
+.formCard {
+  background: #fff;
+  padding: 40px;
+  border: 1px solid #eee;
+  max-width: 600px;
+}
+
+.field {
+  margin-bottom: 30px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.field input, .field textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-family: inherit;
+}
+
+.field input:focus, .field textarea:focus {
+  border-color: #000;
+}
+
+.submitBtn {
+  margin-top: 20px;
+}

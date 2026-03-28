@@ -1,0 +1,54 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fdfdfd;
+}
+
+.loginForm {
+  background: #fff;
+  padding: 60px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.loginForm h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 25px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.field input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.field input:focus {
+  border-color: #000;
+}
+
+.loginBtn {
+  width: 100%;
+  margin-top: 20px;
+}

@@ -1,0 +1,98 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.tableWrapper {
+  background: #fff;
+  border: 1px solid #eee;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: 20px 30px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 20px 30px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #eee;
+}
+
+.imgThumbnail {
+  width: 60px;
+  height: 80px;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+
+.nameList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.8rem;
+}
+
+.priceCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.oldPrice {
+  font-size: 0.75rem;
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.promoPrice {
+  color: #ff4747;
+  font-weight: 600;
+}
+
+.tagList {
+  display: flex;
+  gap: 5px;
+}
+
+.tagBadge {
+  background: #eee;
+  color: #333;
+  padding: 2px 6px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+}
+
+.actions a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.deleteBtn {
+  color: #ff4747;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+}

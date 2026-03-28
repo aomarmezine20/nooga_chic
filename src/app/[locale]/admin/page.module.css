@@ -1,0 +1,55 @@
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.statCard {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #eee;
+}
+
+.statCard h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.statCard p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.recentActivity h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.activityList {
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+.activityItem {
+  padding: 20px 30px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  gap: 30px;
+  font-size: 0.9rem;
+}
+
+.activityItem span:first-child {
+  color: #999;
+  min-width: 100px;
+}
+
+.activityItem:last-child {
+  border-bottom: none;
+}

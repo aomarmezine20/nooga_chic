@@ -1,0 +1,101 @@
+.footer {
+  background: #fdfdfd;
+  padding: 100px 0 40px;
+  border-top: 1px solid #eee;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.brand {
+  flex: 1;
+  max-width: 400px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.manifesto {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 30px;
+  max-width: 300px;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.linksCols {
+  display: flex;
+  gap: 80px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links h3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.links a {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #000;
+}
+
+.bottomBar {
+  margin-top: 100px;
+  border-top: 1px solid #eee;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.paymentIcons {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background: #eee;
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    text-align: center;
+  }
+  .links {
+    align-items: center;
+  }
+}
