@@ -54,7 +54,7 @@ export default function AdminProducts() {
                 </td>
                 <td>
                   <div className={styles.perfCol}>
-                    <span className={styles.productClicks}>📊 {Math.floor(Math.random() * 45) + 5} clics</span>
+                    <span className={styles.productClicks}>📊 0 clics</span>
                   </div>
                 </td>
                 <td>

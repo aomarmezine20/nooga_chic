@@ -163,3 +163,36 @@
   text-align: center;
   padding: 20px;
 }
+
+.errorBox {
+  margin: 50px auto;
+  max-width: 500px;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.errorBox p {
+  color: #c53030;
+  font-size: 0.9rem;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  color: #bbb;
+  text-align: center;
+  gap: 15px;
+}
+
+.emptyState p {
+  font-size: 0.8rem;
+}
