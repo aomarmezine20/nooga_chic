@@ -1,16 +1,15 @@
 import { PrismaClient } from '@prisma/client'
 import { MOCK_PRODUCTS } from '../src/lib/mock-data'
 
-const databaseUrl = process.env.DATABASE_POSTGRES_URL || "postgresql://postgres:[PASSWORD]@db.clsecoiilkypshqoyppt.supabase.co:6543/postgres?pgbouncer=true";
+// Map Vercel-Supabase variables
+if (!process.env.DATABASE_URL && process.env.DATABASE_POSTGRES_URL) {
+  process.env.DATABASE_URL = process.env.DATABASE_POSTGRES_URL;
+}
 
-const prisma = new PrismaClient({
-  datasource: {
-    url: databaseUrl
-  }
-} as any)
+const prisma = new PrismaClient()
 
 async function main() {
-  console.log('Seeding products to real DB...')
+  console.log('Seeding products to DB...')
 
   // Create categories
   await prisma.category.upsert({
