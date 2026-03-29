@@ -48,6 +48,20 @@
 .copyright {
   font-size: 0.7rem;
   color: #bbb;
+  margin-bottom: 20px;
+}
+
+.adminLink {
+  font-size: 0.65rem;
+  color: #eee;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  transition: color 0.3s;
+}
+
+.adminLink:hover {
+  color: #999;
 }
 
 .linksCols {

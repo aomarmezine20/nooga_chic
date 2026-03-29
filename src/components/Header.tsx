@@ -6,7 +6,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Menu, Search, X } from 'lucide-react';
 import styles from './Header.module.css';
 import { STORE_NAME } from '@/lib/constants';
-import MobileMenu from './MobileMenu';
+import MobileMenu from '@/components/MobileMenu';
 
 export default function Header() {
   const t = useTranslations('Header');

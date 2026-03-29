@@ -13,6 +13,7 @@ export default function Footer() {
           <h2 className={styles.logo}>{STORE_NAME}</h2>
           <p className={styles.manifesto}>{t('manifesto')}</p>
           <p className={styles.copyright}>© {new Date().getFullYear()} {STORE_NAME}. {t('allRightsReserved')}.</p>
+          <Link href="/admin/login" className={styles.adminLink}>Connexion</Link>
         </div>
         
         <div className={styles.linksCols}>

@@ -5,6 +5,7 @@
   color: inherit;
   transition: transform 0.3s ease;
   animation: fadeIn 0.6s ease forwards;
+  border-radius: 4px;
 }
 
 .imageWrapper {
@@ -12,6 +13,7 @@
   aspect-ratio: 3 / 4;
   overflow: hidden;
   background: #fcfcfc;
+  border-radius: 4px;
 }
 
 .image {
@@ -21,6 +23,34 @@
 
 .card:hover .image {
   transform: scale(1.04);
+}
+
+.wishlistBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.isFavorite {
+  background: #fff;
+  color: #000;
+}
+
+.wishlistBtn:active {
+  transform: scale(0.9);
 }
 
 .tags {
@@ -40,6 +70,7 @@
   text-transform: uppercase;
   color: #fff;
   font-weight: 500;
+  border-radius: 2px;
 }
 
 .tagNew { background: #000; }

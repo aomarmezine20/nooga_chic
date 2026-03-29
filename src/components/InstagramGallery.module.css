@@ -1,7 +1,7 @@
 .gallery {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 15px;
+  gap: 10px;
 }
 
 .item {
@@ -9,6 +9,7 @@
   aspect-ratio: 1 / 1;
   overflow: hidden;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .overlay {

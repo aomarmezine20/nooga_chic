@@ -19,8 +19,8 @@ export default function BottomNav() {
         <ShoppingBag size={22} />
         <span>{t('shop')}</span>
       </Link>
-      <Link href="/favoris" className={`${styles.navItem} ${pathname === '/favoris' ? styles.active : ''}`}>
-        <Heart size={22} />
+      <Link href="/favoris" className={`${styles.navItem} ${pathname.includes('/favoris') ? styles.active : ''}`}>
+        <Heart size={22} fill={pathname.includes('/favoris') ? "currentColor" : "none"} />
         <span>Favoris</span>
       </Link>
       <Link href="/admin" className={`${styles.navItem} ${pathname.includes('/admin') ? styles.active : ''}`}>

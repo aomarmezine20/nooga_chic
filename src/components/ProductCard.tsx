@@ -6,6 +6,9 @@ import { useLocale, useTranslations } from 'next-intl';
 import styles from './ProductCard.module.css';
 import { Product } from '@/lib/mock-data';
 
+import { Heart } from 'lucide-react';
+import { useWishlist } from '@/lib/use-wishlist';
+
 interface ProductCardProps {
   product: Product;
 }
@@ -13,10 +16,19 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   const locale = useLocale() as 'fr' | 'en' | 'ar';
   const t = useTranslations('Product');
+  const { toggle, isInWishlist } = useWishlist();
+
+  const isFavorite = isInWishlist(product.id);
 
   const name = product.name[locale];
   const mainImage = product.images[0];
   const hoverImage = product.images[1] || product.images[0];
+
+  const handleWishlist = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggle(product.id);
+  };
 
   return (
     <Link href={`/produit/${product.id}`} className={styles.card}>
@@ -34,6 +46,14 @@ export default function ProductCard({ product }: ProductCardProps) {
           className={`${styles.image} ${styles.hoverImage}`}
         />
         
+        <button 
+          className={`${styles.wishlistBtn} ${isFavorite ? styles.isFavorite : ''}`}
+          onClick={handleWishlist}
+          aria-label="Ajouter aux favoris"
+        >
+          <Heart size={20} fill={isFavorite ? "currentColor" : "none"} strokeWidth={1.2} />
+        </button>
+
         <div className={styles.tags}>
           {product.isNew && <span className={`${styles.tag} ${styles.tagNew}`}>{t('new')}</span>}
           {product.isHot && <span className={`${styles.tag} ${styles.tagHot}`}>{t('hot')}</span>}
