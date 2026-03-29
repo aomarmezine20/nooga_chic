@@ -1,0 +1,106 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2000;
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+.drawer {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.header {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 0.5px solid #eee;
+}
+
+.closeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.nav {
+  padding: 40px 20px;
+  flex: 1;
+}
+
+.navLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 0.5px solid #eee;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.footer {
+  padding: 40px 20px;
+  background: #f8f8f8;
+}
+
+.locales {
+  margin-bottom: 30px;
+}
+
+.localeTitle {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.localeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.localeGrid a {
+  font-size: 0.8rem;
+  padding: 10px 0;
+  border: 0.5px solid #eee;
+  text-align: center;
+  background: #fff;
+}
+
+.localeGrid a.activeLocale {
+  border-color: #000;
+  font-weight: 600;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

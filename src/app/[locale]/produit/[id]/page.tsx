@@ -48,9 +48,21 @@ ${selectedSize ? `📏 Taille: ${selectedSize}` : ''}
   };
 
   return (
-    <div className="container section">
+    <div style={{ padding: 0, maxWidth: '100%' }}>
       <div className={styles.productLayout}>
         <div className={styles.galleryContainer}>
+          <div className={styles.mainImageWrapper}>
+            <div className={styles.mainImage}>
+              <Image 
+                src={product.images[activeImage]} 
+                alt={name} 
+                fill 
+                className={styles.zoomImage}
+                priority
+              />
+            </div>
+            {product.isPromo && <div className={styles.promoBadge}>{t('sale')}</div>}
+          </div>
           <div className={styles.thumbnailList}>
             {product.images.map((img, idx) => (
               <div 
@@ -62,23 +74,11 @@ ${selectedSize ? `📏 Taille: ${selectedSize}` : ''}
               </div>
             ))}
           </div>
-          <div className={styles.mainImageWrapper}>
-            <div className={styles.mainImage}>
-              <Image 
-                src={product.images[activeImage]} 
-                alt={name} 
-                fill 
-                className={styles.zoomImage}
-              />
-            </div>
-            {product.isPromo && <div className={styles.promoBadge}>{t('sale')}</div>}
-          </div>
         </div>
 
         <div className={styles.info}>
           <nav className={styles.breadcrumb}>
-            <Link href="/">{t.rich('Header.home')}</Link> / 
-            <Link href="/boutique">{t.rich('Header.shop')}</Link> / 
+            <Link href="/boutique">{t('availability')}</Link> / 
             <span>{name}</span>
           </nav>
 
@@ -112,7 +112,7 @@ ${selectedSize ? `📏 Taille: ${selectedSize}` : ''}
                       onClick={() => setSelectedSize(size)}
                     >
                       {size}
-                      {isOutOfStock && <span className={styles.stockLabel}>X</span>}
+                      {isOutOfStock && <span className={styles.stockLabel}>✕</span>}
                     </button>
                   );
                 })}
@@ -124,7 +124,7 @@ ${selectedSize ? `📏 Taille: ${selectedSize}` : ''}
             <h4 className={styles.optionLabel}>{t('qty')}</h4>
             <div className={styles.qtyContainer}>
               <div className={styles.qtyControl}>
-                <button onClick={() => setQuantity(Math.max(1, quantity - 1))}>-</button>
+                <button onClick={() => setQuantity(Math.max(1, quantity - 1))}>−</button>
                 <span>{quantity}</span>
                 <button onClick={() => setQuantity(quantity + 1)}>+</button>
               </div>
@@ -142,6 +142,23 @@ ${selectedSize ? `📏 Taille: ${selectedSize}` : ''}
             <p>{t('deliveryInfo')}</p>
           </div>
         </div>
+      </div>
+
+      {/* Mobile sticky bottom bar — Zara style */}
+      <div className={styles.stickyBar}>
+        <div>
+          {product.discountPrice ? (
+            <>
+              <span className={styles.stickyOldPrice}>{product.price} MAD</span>
+              <span className={styles.stickyPrice}>{product.discountPrice} MAD</span>
+            </>
+          ) : (
+            <span className={styles.stickyPrice}>{product.price} MAD</span>
+          )}
+        </div>
+        <button className={styles.stickyBtn} onClick={handleWhatsAppOrder}>
+          {t('commander')}
+        </button>
       </div>
     </div>
   );

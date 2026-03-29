@@ -1,22 +1,32 @@
+/* Mobile-first boutique page */
+.pageWrapper {
+  padding-top: 0;
+}
+
 .controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 60px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 20px;
+  padding: 15px 0;
+  border-bottom: 0.5px solid #eee;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: 15px;
 }
 
 .filters {
   display: flex;
-  gap: 30px;
+  gap: 20px;
+  flex-shrink: 0;
 }
 
 .filters a {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #999;
+  color: #bbb;
+  white-space: nowrap;
 }
 
 .filters a.activeFilter {
@@ -26,38 +36,47 @@
 
 .sorting {
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  flex-shrink: 0;
 }
 
 .sorting a {
-  font-size: 0.75rem;
-  color: #666;
+  font-size: 0.65rem;
+  color: #999;
   text-transform: uppercase;
   letter-spacing: 1px;
+  white-space: nowrap;
 }
 
+.count {
+  font-size: 0.7rem;
+  color: #bbb;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* 2-column grid on mobile — standard for Zara */
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .controls {
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+
+  .controls {
+    margin-bottom: 30px;
+    overflow: visible;
+  }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 1200px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
   }
 }

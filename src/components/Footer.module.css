@@ -1,46 +1,65 @@
+/* Mobile-first footer */
 .footer {
-  background: #fdfdfd;
-  padding: 100px 0 40px;
-  border-top: 1px solid #eee;
+  background: #fafafa;
+  padding: 60px 0 30px;
+  border-top: 0.5px solid #eee;
+  /* On mobile, hide below bottom nav */
+  margin-bottom: 0;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
   display: flex;
-  justify-content: space-between;
-  gap: 60px;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 40px;
+    gap: 60px;
+  }
+  .footer { padding: 80px 0 40px; }
 }
 
 .brand {
   flex: 1;
-  max-width: 400px;
 }
 
 .logo {
-  font-size: 1.5rem;
-  letter-spacing: 5px;
-  margin-bottom: 25px;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
   text-transform: uppercase;
+  font-weight: 300;
 }
 
 .manifesto {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   line-height: 1.8;
-  color: #666;
-  margin-bottom: 30px;
-  max-width: 300px;
+  color: #888;
+  margin-bottom: 20px;
 }
 
 .copyright {
-  font-size: 0.75rem;
-  color: #999;
+  font-size: 0.7rem;
+  color: #bbb;
 }
 
 .linksCols {
-  display: flex;
-  gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 480px) {
+  .linksCols {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .links {
@@ -49,33 +68,30 @@
 }
 
 .links h3 {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: 600;
 }
 
 .links a {
-  font-size: 0.8rem;
-  color: #666;
-  margin-bottom: 12px;
-  transition: color 0.3s ease;
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 10px;
 }
 
-.links a:hover {
-  color: #000;
-}
+.links a:hover { color: #000; }
 
 .bottomBar {
-  margin-top: 100px;
-  border-top: 1px solid #eee;
-  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 0.5px solid #eee;
+  padding-top: 25px;
   text-align: center;
 }
 
 .paymentIcons {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   letter-spacing: 2px;
   color: #ccc;
   display: flex;
@@ -85,17 +101,8 @@
 }
 
 .dot {
-  width: 4px;
-  height: 4px;
-  background: #eee;
+  width: 3px;
+  height: 3px;
+  background: #ddd;
   border-radius: 50%;
-}
-
-@media (max-width: 1024px) {
-  .container {
-    text-align: center;
-  }
-  .links {
-    align-items: center;
-  }
 }

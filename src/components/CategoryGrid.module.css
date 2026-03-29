@@ -1,15 +1,16 @@
+/* Keep 2-col side-by-side on ALL screen sizes — Zara style */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2px;
-  background: #eee;
 }
 
 .categoryCard {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
-  background: #fff;
+  background: #f5f5f5;
+  display: block;
 }
 
 .imageWrapper {
@@ -23,39 +24,44 @@
   transition: transform 0.8s cubic-bezier(0.2, 0, 0, 1);
 }
 
+.categoryCard:active .image,
 .categoryCard:hover .image {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .overlay {
   position: absolute;
-  bottom: 40px;
-  left: 40px;
+  bottom: 20px;
+  left: 15px;
   z-index: 2;
   color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 8px;
 }
 
 .categoryName {
-  font-size: 2rem;
+  font-size: 1.2rem;
   letter-spacing: 4px;
   text-transform: uppercase;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.4);
 }
 
 .cta {
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #fff;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(255,255,255,0.8);
   width: fit-content;
 }
 
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 0;
+@media (min-width: 768px) {
+  .overlay {
+    bottom: 40px;
+    left: 40px;
+    gap: 15px;
   }
+  .categoryName { font-size: 2rem; }
+  .cta { font-size: 0.8rem; }
 }

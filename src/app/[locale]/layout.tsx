@@ -6,6 +6,7 @@ import "@/app/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import BottomNav from "@/components/BottomNav";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 
@@ -24,7 +25,6 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  console.log('DEBUG LOCALE:', locale);
   if (!routing.locales.includes(locale as any)) notFound();
 
   const messages = await getMessages();
@@ -32,12 +32,13 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={isRTL ? "rtl" : "ltr"} className={geist.variable}>
-      <body>
+      <body style={{ paddingBottom: 'var(--bottom-nav-height)' }}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Header />
           <main>{children}</main>
           <Footer />
           <WhatsAppButton />
+          <BottomNav />
         </NextIntlClientProvider>
       </body>
     </html>
