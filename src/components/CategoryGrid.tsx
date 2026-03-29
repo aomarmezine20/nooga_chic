@@ -33,6 +33,7 @@ export default function CategoryGrid() {
                 src={cat.image} 
                 alt={cat.sub} 
                 fill 
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className={styles.image}
               />
               <div className={styles.overlay}>
