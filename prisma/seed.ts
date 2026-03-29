@@ -45,6 +45,16 @@ async function main() {
     })
   }
 
+  // Create Admin
+  await prisma.admin.upsert({
+    where: { email: 'admin@noogachic.com' },
+    update: {},
+    create: {
+      email: 'admin@noogachic.com',
+      password: 'Larlanco12face@@**' // Robust password
+    }
+  })
+
   console.log('Seed complete!')
 }
 

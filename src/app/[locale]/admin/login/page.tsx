@@ -9,14 +9,24 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const router = useRouter();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simplified login for demo
-    if (email === 'admin@noogachic.com' && password === 'Larlanco12face@@**') {
-      localStorage.setItem('isAdmin', 'true');
-      router.push('/admin');
-    } else {
-      alert('Identifiants incorrects');
+    
+    try {
+      const res = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+
+      if (res.ok) {
+        localStorage.setItem('isAdmin', 'true');
+        router.push('/admin');
+      } else {
+        alert('Identifiants incorrects');
+      }
+    } catch (error) {
+      alert('Erreur de connexion');
     }
   };
 
