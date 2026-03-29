@@ -59,6 +59,7 @@ ${selectedSize ? `📏 Taille: ${selectedSize}` : ''}
                 src={product.images[activeImage]} 
                 alt={name} 
                 fill 
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 50vw"
                 className={styles.zoomImage}
                 priority
               />
@@ -72,7 +73,7 @@ ${selectedSize ? `📏 Taille: ${selectedSize}` : ''}
                 className={`${styles.thumbnail} ${activeImage === idx ? styles.activeThumbnail : ''}`}
                 onClick={() => setActiveImage(idx)}
               >
-                <Image src={img} alt={`${name} ${idx}`} fill style={{ objectFit: 'cover' }} />
+                <Image src={img} alt={`${name} ${idx}`} fill sizes="80px" style={{ objectFit: 'cover' }} />
               </div>
             ))}
           </div>

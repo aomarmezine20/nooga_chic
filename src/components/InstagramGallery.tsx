@@ -24,7 +24,7 @@ export default function InstagramGallery() {
         <div className={styles.gallery}>
           {images.map((img, idx) => (
             <div key={idx} className={styles.item}>
-              <Image src={img} alt={`Social ${idx}`} fill style={{ objectFit: 'cover' }} />
+              <Image src={img} alt={`Social ${idx}`} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
               <div className={styles.overlay}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
