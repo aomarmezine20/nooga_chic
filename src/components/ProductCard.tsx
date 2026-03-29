@@ -42,12 +42,14 @@ export default function ProductCard({ product }: ProductCardProps) {
           src={mainImage} 
           alt={name} 
           fill 
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className={styles.image}
         />
         <Image 
           src={hoverImage} 
           alt={name} 
           fill 
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className={`${styles.image} ${styles.hoverImage}`}
         />
         
