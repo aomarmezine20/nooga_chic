@@ -9,5 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <html lang="en" data-scroll-behavior="smooth">
+      <body className={geist.className}>{children}</body>
+    </html>
+  );
 }
