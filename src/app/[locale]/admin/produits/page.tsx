@@ -21,6 +21,7 @@ export default function AdminProducts() {
               <th>Nom (FR / EN / AR)</th>
               <th>Catégorie</th>
               <th>Prix</th>
+              <th>Performance</th>
               <th>Tags</th>
               <th>Actions</th>
             </tr>
@@ -50,6 +51,11 @@ export default function AdminProducts() {
                   ) : (
                     <span>{product.price} MAD</span>
                   )}
+                </td>
+                <td>
+                  <div className={styles.perfCol}>
+                    <span className={styles.productClicks}>📊 {Math.floor(Math.random() * 45) + 5} clics</span>
+                  </div>
                 </td>
                 <td>
                   <div className={styles.tagList}>

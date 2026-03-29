@@ -28,8 +28,18 @@ model Product {
   categoryId      String
   category        Category       @relation(fields: [categoryId], references: [id])
   variants        ProductVariant[]
+  interactions    Interaction[]
   createdAt       DateTime       @default(now())
   updatedAt       DateTime       @updatedAt
+}
+
+model Interaction {
+  id        String   @id @default(cuid())
+  type      String   // "VISIT", "WHATSAPP_CLICK"
+  productId String?
+  size      Float?   // for WhatsApp clicks
+  timestamp DateTime @default(now())
+  product   Product? @relation(fields: [productId], references: [id])
 }
 
 model ProductVariant {

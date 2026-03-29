@@ -7,6 +7,7 @@ import { WHATSAPP_NUMBER } from '@/lib/constants';
 import { useState } from 'react';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
+import { trackInteraction } from '@/lib/analytics';
 import styles from './page.module.css';
 
 export default function ProductPage() {
@@ -44,6 +45,7 @@ ${selectedSize ? `📏 Taille: ${selectedSize}` : ''}
 📍 Merci de me contacter pour la livraison.`;
 
     const encodedMessage = encodeURIComponent(message);
+    trackInteraction('WHATSAPP_CLICK', product.id, selectedSize || undefined);
     window.open(`https://wa.me/${WHATSAPP_NUMBER.replace('+', '')}?text=${encodedMessage}`, '_blank');
   };
 

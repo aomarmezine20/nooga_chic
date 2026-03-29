@@ -8,6 +8,7 @@ import { Product } from '@/lib/mock-data';
 
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/lib/use-wishlist';
+import { trackInteraction } from '@/lib/analytics';
 
 interface ProductCardProps {
   product: Product;
@@ -31,7 +32,11 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <Link href={`/produit/${product.id}`} className={styles.card}>
+    <Link 
+      href={`/produit/${product.id}`} 
+      className={styles.card}
+      onClick={() => trackInteraction('VISIT', product.id)}
+    >
       <div className={styles.imageWrapper}>
         <Image 
           src={mainImage} 
