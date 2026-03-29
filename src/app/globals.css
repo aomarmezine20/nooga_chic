@@ -4,7 +4,7 @@
   --accent: #f8f8f8;
   --secondary: #767676;
   --geist-sans: var(--font-geist-sans), Helvetica, Arial, sans-serif;
-  --header-height: 60px;
+  --header-height: 90px;
   --bottom-nav-height: 70px;
   --safe-padding: 20px;
 }

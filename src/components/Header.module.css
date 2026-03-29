@@ -23,7 +23,7 @@
 }
 
 .logoContainer {
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,7 +131,7 @@
     transform: none;
   }
   .logoContainer {
-    height: 65px;
+    height: 80px;
   }
   .menuToggle { display: none; }
   .desktopNav {
