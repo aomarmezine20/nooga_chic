@@ -12,7 +12,7 @@ export default function LoginPage() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     // Simplified login for demo
-    if (email === 'admin@noogachic.com' && password === 'admin123') {
+    if (email === 'admin@noogachic.com' && password === 'Larlanco12face@@**') {
       localStorage.setItem('isAdmin', 'true');
       router.push('/admin');
     } else {
