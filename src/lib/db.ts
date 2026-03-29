@@ -5,14 +5,15 @@ if (!process.env.DATABASE_URL && process.env.DATABASE_POSTGRES_URL) {
   process.env.DATABASE_URL = process.env.DATABASE_POSTGRES_URL;
 }
 
-const globalForPrisma = global as unknown as { prisma: PrismaClient }
+const globalForPrisma = globalThis as unknown as {
+  prisma: PrismaClient | undefined
+}
 
-// For Prisma 7 on Vercel/Supabase
-// We use the default constructor to avoid "Unknown property" errors with the new engine
 export const prisma =
-  globalForPrisma.prisma ||
+  globalForPrisma.prisma ??
   new PrismaClient({
-    log: ['query'],
+    // Removed all custom datasource/accelerate overrides for Prisma 7 standard Node.js runtime
   })
 
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
+if (process.env.NODE_ENV !== 'production') 
+  globalForPrisma.prisma = prisma

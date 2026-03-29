@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
+
+export const runtime = 'nodejs';
 import { subDays, startOfDay, format } from 'date-fns';
 
 export async function GET() {
