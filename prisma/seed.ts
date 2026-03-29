@@ -1,10 +1,18 @@
 import { PrismaClient } from '@prisma/client'
 import { MOCK_PRODUCTS } from '../src/lib/mock-data'
 
-const prisma = new PrismaClient()
+const databaseUrl = process.env.DATABASE_POSTGRES_URL || "postgresql://postgres:[PASSWORD]@db.clsecoiilkypshqoyppt.supabase.co:6543/postgres?pgbouncer=true";
+
+const prisma = new PrismaClient({
+  datasources: {
+    db: {
+      url: databaseUrl
+    }
+  }
+} as any)
 
 async function main() {
-  console.log('Seeding products...')
+  console.log('Seeding products to real DB...')
 
   // Create categories
   await prisma.category.upsert({
@@ -51,7 +59,7 @@ async function main() {
     update: {},
     create: {
       email: 'admin@noogachic.com',
-      password: 'Larlanco12face@@**' // Robust password
+      password: 'Larlanco12face@@**'
     }
   })
 
