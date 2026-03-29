@@ -1,9 +1,21 @@
 /* Mobile-first product page */
+.pageWrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .pageWrapper {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
 .productLayout {
   display: flex;
   flex-direction: column;
   gap: 0;
-  padding: 0;
 }
 
 /* Image gallery — full-width on mobile */

@@ -23,10 +23,6 @@ export default function BottomNav() {
         <Heart size={22} fill={pathname.includes('/favoris') ? "currentColor" : "none"} />
         <span>Favoris</span>
       </Link>
-      <Link href="/admin" className={`${styles.navItem} ${pathname.includes('/admin') ? styles.active : ''}`}>
-        <User size={22} />
-        <span>Admin</span>
-      </Link>
     </nav>
   );
 }

@@ -48,7 +48,7 @@ ${selectedSize ? `📏 Taille: ${selectedSize}` : ''}
   };
 
   return (
-    <div style={{ padding: 0, maxWidth: '100%' }}>
+    <div className={styles.pageWrapper}>
       <div className={styles.productLayout}>
         <div className={styles.galleryContainer}>
           <div className={styles.mainImageWrapper}>

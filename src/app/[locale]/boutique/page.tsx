@@ -8,15 +8,26 @@ import styles from './page.module.css';
 export default async function Boutique({
   searchParams,
 }: {
-  searchParams: Promise<{ category?: string; sort?: string }>;
+  searchParams: Promise<{ category?: string; sort?: string; search?: string }>;
 }) {
-  const { category: categoryFilter, sort } = await searchParams;
+  const { category: categoryFilter, sort, search } = await searchParams;
   const t = await getTranslations('Filters');
   const th = await getTranslations('Header');
 
-  let filteredProducts = categoryFilter 
-    ? MOCK_PRODUCTS.filter(p => p.category === categoryFilter)
-    : MOCK_PRODUCTS;
+  let filteredProducts = MOCK_PRODUCTS;
+
+  if (categoryFilter) {
+    filteredProducts = filteredProducts.filter(p => p.category === categoryFilter);
+  }
+
+  if (search) {
+    const q = search.toLowerCase();
+    filteredProducts = filteredProducts.filter(p => 
+      p.name.fr.toLowerCase().includes(q) || 
+      p.name.en.toLowerCase().includes(q) || 
+      p.name.ar.includes(q)
+    );
+  }
 
   if (sort === 'price-asc') {
     filteredProducts = [...filteredProducts].sort((a, b) => (a.discountPrice || a.price) - (b.discountPrice || b.price));
