@@ -38,7 +38,13 @@ export default function Header() {
         </button>
 
         <Link href="/" className={styles.logo}>
-          {STORE_NAME}
+          <div className={styles.logoContainer}>
+            <img 
+              src="/logo.png" 
+              alt={STORE_NAME} 
+              className={styles.logoImg}
+            />
+          </div>
         </Link>
         
         <nav className={styles.desktopNav}>

@@ -13,13 +13,31 @@
 }
 
 .logo {
-  font-size: 1.1rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  height: 100%;
+}
+
+.logoContainer {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImg {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logoImg {
+  transform: scale(1.05);
 }
 
 .menuToggle {
@@ -111,7 +129,9 @@
   .logo {
     position: static;
     transform: none;
-    font-size: 1.4rem;
+  }
+  .logoContainer {
+    height: 65px;
   }
   .menuToggle { display: none; }
   .desktopNav {
