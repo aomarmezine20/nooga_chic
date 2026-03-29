@@ -4,10 +4,8 @@ import { MOCK_PRODUCTS } from '../src/lib/mock-data'
 const databaseUrl = process.env.DATABASE_POSTGRES_URL || "postgresql://postgres:[PASSWORD]@db.clsecoiilkypshqoyppt.supabase.co:6543/postgres?pgbouncer=true";
 
 const prisma = new PrismaClient({
-  datasources: {
-    db: {
-      url: databaseUrl
-    }
+  datasource: {
+    url: databaseUrl
   }
 } as any)
 

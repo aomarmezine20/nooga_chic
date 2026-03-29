@@ -8,11 +8,10 @@ const databaseUrl = process.env.DATABASE_POSTGRES_URL || "postgresql://postgres:
 export const prisma =
   globalForPrisma.prisma ||
   new PrismaClient({
-    // If using Supabase directly, we use the standard datasource
-    // If using Prisma Accelerate (prisma+postgres://), we use accelerateUrl
+    // In Prisma 7, we either use accelerateUrl or the singular 'datasource' property
     ...(databaseUrl.startsWith('prisma') 
       ? { accelerateUrl: databaseUrl } 
-      : { datasources: { db: { url: databaseUrl } } }),
+      : { datasource: { url: databaseUrl } }),
     log: ['query'],
   } as any)
 
