@@ -2,6 +2,6 @@ import { defineConfig } from 'prisma/config'
 
 export default defineConfig({
   datasource: {
-    url: process.env.DATABASE_URL || "prisma+postgres://noogachic.dummy.url",
+    url: process.env.DATABASE_URL || "postgresql://dummy:dummy@localhost:5432/db",
   },
 })
